@@ -12,4 +12,11 @@ public class Collision : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("soldier"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
 }
